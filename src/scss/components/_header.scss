@@ -1,0 +1,50 @@
+.header{
+   width: 100%;
+   &__top{
+      @include flexbox($jc: space-around);
+      gap: 1em;
+      padding: 14px;
+      background-color: #F6623E;
+      color: #fff;
+   }
+
+   &__main{
+      @include flexbox($jc: space-around, $ai:center);
+      padding: 1%;
+      position: relative;
+      .main{
+         &__nav{
+            &-list{
+               @include flexbox();
+               gap: 3em;
+               font-style: 18px;
+               font-weight: 400;
+               li{
+                  &:nth-child(1){
+                     color: #F6623E;
+                  }
+
+                  &:hover{
+                     color: #F6623E;
+                     transition: .3s;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+
+// @media screen and (max-width: 948px) {
+//    .header{
+//       &__main{
+//          .main{
+//             &__nav,
+//             &__btns{
+//                display: none;
+//             }
+//          }
+//       }
+//    }
+// }

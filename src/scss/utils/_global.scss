@@ -1,0 +1,24 @@
+.img-container {
+   max-width: 100%;
+   height: auto;
+   display: block;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+.open {
+   display: flex !important;
+}
+
+.btn-fullbg{
+   @include btn();
+   &:hover{
+      color: black;
+      background: transparent;
+      border: 2px solid #F6623E;
+   }
+}

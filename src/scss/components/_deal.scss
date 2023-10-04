@@ -1,0 +1,75 @@
+.deal {
+   @include flexbox($jc: center);
+   gap: 1.875rem;
+   padding: 10% 0;
+
+   &__title {
+      @include flexbox($ai: center, $wrap: nowrap, $dir: column);
+      gap: 1.5625rem;
+      h3 {
+         font-size: calc(18px + 18 * (100vw /1920));
+         font-weight: 500;
+         line-height: 32px;
+      }
+
+      hr{
+         height: 4px;
+         width: 18%;
+         background-color: #f6623e;
+      }
+
+      p{
+         width: 90%;
+         text-align: center;
+         color: #454545;
+         font-size: 18px;
+         font-weight: 500;
+         line-height: 24px;
+      }
+   }
+
+   &__products {
+      &-list {
+         @include flexbox($jc: center);
+         gap: 1.875rem;
+
+         .product {
+            width: 20%;
+
+            &__content {
+               @include flexbox($jc:center);
+               gap: 1.25rem;
+               font-weight: 500;
+               &-img{
+                  padding: 45px;
+                  border: 1px solid #E8E8E8;
+                  background-color: #F4F3F4;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 948px) {
+   .deal{
+      &__products{
+         &-list{
+            .product{
+               width: 35%;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 545px) {
+   .deal{
+      &__products{
+         &-list{
+            .product{
+               width: 50%;
+            }
+         }
+      }
+   }
+}

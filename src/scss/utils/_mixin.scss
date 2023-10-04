@@ -1,0 +1,16 @@
+@mixin flexbox($dir: row, $jc: flex-start, $ai: flex-start, $wrap: wrap) {
+   display: flex;
+   flex-direction: $dir;
+   justify-content: $jc;
+   align-items: $ai;
+   flex-wrap: $wrap;
+}
+
+@mixin btn($bg: #F6623E, $clr: #FFF, $bor: 2px solid transparent, $pd: 2.5%, $fw: 500, $tt: uppercase){
+   background: $bg;
+   color: $clr;
+   border: $bor;
+   padding: $pd;
+   font-weight: $fw;
+   text-transform: $tt;
+}
