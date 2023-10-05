@@ -18,7 +18,7 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
+  font-size: 16px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -85,11 +85,29 @@ h6 {
   display: flex !important;
 }
 
+.btn {
+  background: transparent;
+  color: #000;
+  border: 2px solid #F6623E;
+  padding: 2%;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background: #F6623E;
+  color: #FFF;
+  border: 2px solid transparent;
+  padding: 2%;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
 .btn-fullbg {
   background: #F6623E;
   color: #FFF;
   border: 2px solid transparent;
-  padding: 2.5%;
+  padding: 2%;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -97,6 +115,13 @@ h6 {
   color: black;
   background: transparent;
   border: 2px solid #F6623E;
+  transition: 0.3s;
+}
+
+h3 {
+  font-size: calc(18px + 0.9375vw);
+  font-weight: 500;
+  line-height: 32px;
 }
 
 .fade-in-bottom {
@@ -314,7 +339,7 @@ h6 {
 }
 .hero__content-text h1 {
   color: #000;
-  font-size: calc(20px + 1.3541666667vw);
+  font-size: calc(22px + 1.25vw);
   font-style: normal;
   font-weight: 600;
   line-height: 72px;
@@ -324,7 +349,8 @@ h6 {
 }
 .hero__wave {
   position: absolute;
-  bottom: -3px;
+  bottom: -5px;
+  width: 100%;
 }
 
 @media screen and (max-width: 948px) {
@@ -354,11 +380,6 @@ h6 {
   flex-wrap: nowrap;
   gap: 1.5625rem;
 }
-.deal__title h3 {
-  font-size: calc(18px + 0.9375vw);
-  font-weight: 500;
-  line-height: 32px;
-}
 .deal__title hr {
   height: 4px;
   width: 18%;
@@ -380,10 +401,10 @@ h6 {
   flex-wrap: wrap;
   gap: 1.875rem;
 }
-.deal__products-list .product {
+.deal__products-list .item {
   width: 20%;
 }
-.deal__products-list .product__content {
+.deal__products-list .item__content {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -392,19 +413,212 @@ h6 {
   gap: 1.25rem;
   font-weight: 500;
 }
-.deal__products-list .product__content-img {
+.deal__products-list .item__content-img {
   padding: 45px;
   border: 1px solid #E8E8E8;
   background-color: #F4F3F4;
 }
 
 @media screen and (max-width: 948px) {
-  .deal__products-list .product {
+  .deal__products-list .item {
     width: 35%;
   }
 }
 @media screen and (max-width: 545px) {
-  .deal__products-list .product {
+  .deal__products-list .item {
     width: 50%;
+  }
+}
+.advantages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 10%;
+}
+.advantages__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+.advantages__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 25%;
+}
+.advantages__list-item .advantage__img {
+  position: relative;
+  padding: 0 5px 0 0;
+}
+.advantages__list-item .advantage__img-circle {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  background-color: #f6623e;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.advantages__list-item .advantage__title {
+  color: #828181;
+  line-height: 20px;
+}
+.advantages__list-item .advantage__title h5 {
+  color: #000;
+  font-size: calc(15px + 0.46875vw);
+  font-weight: 500;
+  line-height: 32px;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 740px) {
+  .advantages__list-item {
+    width: 80%;
+  }
+}
+.range {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+.range__content {
+  width: 35%;
+}
+.range__content-text {
+  color: #454545;
+  font-weight: 500;
+  line-height: 25px;
+  padding-bottom: 5%;
+}
+.range__content-text h2 {
+  color: #000;
+  font-size: calc(20px + 1.5625vw);
+  font-weight: 600;
+  line-height: 72px;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+}
+.range__images {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+.range__images div:nth-child(1) {
+  grid-area: 1/1/2/2;
+}
+.range__images div:nth-child(2) {
+  grid-area: 1/2/3/3;
+}
+.range__images div:nth-child(3) {
+  grid-area: 2/1/3/2;
+}
+
+@media screen and (max-width: 948px) {
+  .range {
+    gap: 1.5em;
+  }
+  .range__content {
+    width: 80%;
+  }
+  .range__content-text h2 {
+    line-height: 40px;
+  }
+  .range__images {
+    width: 80%;
+  }
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.625em;
+  padding: 5%;
+}
+.products__main-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.875em;
+}
+.products__main-list .product {
+  width: 23%;
+}
+.products__main-list .product__content .product-pd {
+  padding: 45px 86px;
+}
+.products__main-list .product__content-img,
+.products__main-list .product__content .product-badge {
+  position: relative;
+}
+.products__main-list .product__content-img .badge,
+.products__main-list .product__content .product-badge .badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f6623e;
+  font-size: calc(10px + 0.3125vw);
+  color: #fff;
+  font-weight: 400;
+  padding: 5px;
+  margin: 10px;
+}
+.products__main-list .product__content-img {
+  padding: 45px;
+  border: 1px solid #E8E8E8;
+  background-color: #F4F3F4;
+}
+.products__main-list .product__content-title {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+}
+.products__main-list .product__content-title h6 {
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+.products__main-list .product__content-title .price {
+  color: #f6623e;
+  padding-right: 10px;
+}
+.products__main-list .product__content-title .old-price {
+  color: #828282;
+  text-decoration: line-through;
+}
+.products__btn {
+  width: 30%;
+  text-align: center;
+}
+
+@media screen and (max-width: 948px) {
+  .products__main-list .product {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 545px) {
+  .products__main-list .product {
+    width: 50%;
+  }
+  .products__btn {
+    width: 100%;
   }
 }

@@ -1,0 +1,51 @@
+.advantages {
+   @include flexbox($jc:center);
+   padding: 10%;
+   &__list {
+      @include flexbox($jc:center,);
+      gap: 70px;
+      &-item{
+         @include flexbox($dir: column, $ai: center);
+         text-align: center;
+         width: 25%;
+         .advantage{
+            &__img{
+               position: relative;
+               padding: 0 5px 0 0;
+               &-circle{
+                  position: absolute;
+                  z-index: -1;
+                  bottom: 0;
+                  right: 0;
+                  background-color: #f6623e;
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+               }
+            }
+
+            &__title{
+               color: #828181;
+               line-height: 20px;
+               h5{
+                  color: #000;
+                  font-size: calc(15px + 9 * (100vw / 1920));
+                  font-weight: 500;
+                  line-height: 32px;
+                  padding-top: 20px;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 740px) {
+   .advantages{
+      &__list{
+         &-item{
+            width: 80%;
+         }
+      }
+   }
+}

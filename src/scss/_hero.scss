@@ -23,7 +23,7 @@
          
          h1 {
             color: #000;
-            font-size: calc(20px + 26 * (100vw / 1920));
+            font-size: calc(22px + 24 * (100vw / 1920));
             font-style: normal;
             font-weight: 600;
             line-height: 72px;
@@ -37,7 +37,8 @@
 
    &__wave {
       position: absolute;
-      bottom: -3px;
+      bottom: -5px;
+      width: 100%;
    }
 }
 

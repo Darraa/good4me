@@ -1,0 +1,93 @@
+.products {
+   @include flexbox($dir: column, $jc: center, $ai: center);
+   gap: 3.625em;
+   padding: 5%;
+   &__main{
+      &-list{
+         @include flexbox($jc: center);
+         gap: 1.875em;
+         .product{
+            width: 23%;
+            &__content{
+               .product-pd{
+                  padding: 45px 86px;
+               }
+               &-img, 
+               .product-badge{
+                  position: relative;
+                  .badge{
+                     position: absolute;
+                     top: 0;
+                     right: 0;
+                     background-color: #f6623e;
+                     font-size: calc(10px + 6 * (100vw / 1920));
+                     color: #fff;
+                     font-weight: 400;
+                     padding: 5px;
+                     margin: 10px;
+                  }
+               }
+               &-img{
+                  padding: 45px;
+                  border: 1px solid #E8E8E8;
+                  background-color: #F4F3F4;
+               }
+
+               &-title{
+                  text-align: center;
+                  padding-top: 10px;
+                  font-size: 12px;
+                  h6{
+                     font-weight: 500;
+                     line-height: 20px;
+                     letter-spacing: 2px;
+                  }
+                  
+                  .price{
+                     color: #f6623e;
+                     padding-right: 10px;
+                  }
+
+                  .old-price{
+                     color: #828282;
+                     text-decoration: line-through;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &__btn{
+      width: 30%;
+      text-align: center;
+   }
+}
+
+
+@media screen and (max-width: 948px) {
+   .products{
+      &__main{
+         &-list{
+            .product{
+               width: 35%;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 545px) {
+   .products{
+      &__main{
+         &-list{
+            .product{
+               width: 50%;
+            }
+         }
+      }
+
+      &__btn{
+         width: 100%;
+      }
+   }
+}

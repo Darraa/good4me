@@ -6,11 +6,6 @@
    &__title {
       @include flexbox($ai: center, $wrap: nowrap, $dir: column);
       gap: 1.5625rem;
-      h3 {
-         font-size: calc(18px + 18 * (100vw /1920));
-         font-weight: 500;
-         line-height: 32px;
-      }
 
       hr{
          height: 4px;
@@ -33,7 +28,7 @@
          @include flexbox($jc: center);
          gap: 1.875rem;
 
-         .product {
+         .item {
             width: 20%;
 
             &__content {
@@ -55,7 +50,7 @@
    .deal{
       &__products{
          &-list{
-            .product{
+            .item{
                width: 35%;
             }
          }
@@ -66,7 +61,7 @@
    .deal{
       &__products{
          &-list{
-            .product{
+            .item{
                width: 50%;
             }
          }

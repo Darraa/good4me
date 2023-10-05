@@ -14,11 +14,26 @@
    display: flex !important;
 }
 
+.btn{
+   @include btn($bg: transparent, $clr: #000, $bor: 2px solid #F6623E);
+   &:hover{
+      @include btn();
+      transition: .3s;
+   }
+}
+
 .btn-fullbg{
    @include btn();
    &:hover{
       color: black;
       background: transparent;
       border: 2px solid #F6623E;
+      transition: .3s;
    }
+}
+
+h3 {
+   font-size: calc(18px + 18 * (100vw /1920));
+   font-weight: 500;
+   line-height: 32px;
 }
