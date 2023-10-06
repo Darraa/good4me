@@ -8,7 +8,7 @@ burger.addEventListener("click", function () {
 });
 
 
-
+// -----------------Animation on scroll---------------------
 const animItems = document.querySelectorAll(".anim-items");
 
 if (animItems.length > 0) {
@@ -45,3 +45,23 @@ if (animItems.length > 0) {
       return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
    }
 }
+
+// ----------------Focus on label-------------------------
+document.addEventListener("DOMContentLoaded", function() {
+   const input = document.querySelector(".form__field");
+   const label = document.querySelector(".form__label");
+
+   label.addEventListener("click", function() {
+      input.focus();
+   });
+
+   input.addEventListener("focus", function() {
+      label.classList.add("active");
+   });
+
+   input.addEventListener("blur", function() {
+      if (input.value === "") {
+         label.classList.remove("active");
+      }
+   });
+});

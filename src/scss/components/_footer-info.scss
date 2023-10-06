@@ -1,0 +1,48 @@
+.footer{
+   hr{
+      height: 1px;
+      background-color: #828181;
+      width: 90%;
+      margin: 0 auto;
+   }
+   &__info{
+      @include flexbox($jc: space-between, $ai: center);
+      padding: 2% 5%;
+      &-social{
+         .social-list{
+            @include flexbox();
+            gap: 1em;
+
+            svg{
+               &:hover{
+                  fill: #f6623e;
+                  transition: .5s;
+               }
+            }
+         }
+      }
+      &-title{
+         padding-left: 20%;
+      }
+      &-pay{
+         width: 30%;
+      }
+   }
+}
+
+@media screen and (max-width: 960px) {
+   .footer{
+      &__info{
+         flex-direction: column;
+         gap: 1em;
+
+         &-title{
+            padding: 0;
+         }
+
+         &-pay{
+            width: 60%;
+         }
+      }
+   }
+}

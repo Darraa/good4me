@@ -1,0 +1,66 @@
+@import "./input";
+@import "./footer-info";
+.footer{
+   position: relative;
+   background-color: #FFF8F6;
+   .wave-top {
+      width: 100%;
+      rotate: 180deg;
+      position: absolute;
+      top: -5px;
+      left: 0;
+   }
+   
+   &__body{
+      padding: 10% 2% 3% ;
+      @include flexbox($jc: space-between, $ai: center);
+      gap: 2em;
+      color: #454545;
+      line-height: 26px; 
+      &-logo{
+         width: 18%;
+         text-align: center;
+      }
+
+      .mailing-list{
+         width: 35%;
+         text-align: center;
+         &__title{
+            span{
+               color: #000;
+               font-size: calc(16px + 10 * (100vw/1920));
+               font-weight: 500;
+            }
+            p{
+               padding: 0 7%;
+            }
+         }
+      }
+
+      .footer__nav{
+         width: 15%;
+         span{
+            color: #000;
+            font-size: 20px;
+            font-weight: 500;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 960px) {
+   .footer{
+      &__body{
+         justify-content: center;
+         &-logo{
+            width: 80%;
+         }
+         .mailing-list{
+            width: 85%;
+         }
+         .footer__nav{
+            width: 100%;
+         }
+      }
+   }
+}
