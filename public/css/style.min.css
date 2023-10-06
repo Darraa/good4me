@@ -124,6 +124,14 @@ h3 {
   line-height: 32px;
 }
 
+h5 {
+  color: #000;
+  font-size: calc(15px + 0.3645833333vw);
+  font-weight: 500;
+  line-height: 32px;
+  padding-top: 20px;
+}
+
 .fade-in-bottom {
   opacity: 0;
 }
@@ -477,13 +485,6 @@ h3 {
   color: #828181;
   line-height: 20px;
 }
-.advantages__list-item .advantage__title h5 {
-  color: #000;
-  font-size: calc(15px + 0.46875vw);
-  font-weight: 500;
-  line-height: 32px;
-  padding-top: 20px;
-}
 
 @media screen and (max-width: 740px) {
   .advantages__list-item {
@@ -696,5 +697,106 @@ h3 {
 @media screen and (max-width: 948px) {
   .testimonial__content-filling {
     width: 100%;
+  }
+}
+.news {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2.8125rem;
+  padding: 10%;
+}
+.news__content-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.news__content-list .article {
+  width: 30%;
+  text-align: center;
+}
+.news__content-list .article__wrapper-img {
+  padding-bottom: 10px;
+}
+.news__content-list .article__wrapper-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+.news__content-list .article__wrapper-text span {
+  color: #F6623E;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.news__content-list .article__wrapper-text h5 {
+  padding: 0;
+}
+.news__content-list .article__wrapper-text p {
+  color: #828181;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 948px) {
+  .news__content-list .article {
+    width: 80%;
+  }
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 10% 0;
+}
+.gallery .slider {
+  background: white;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.gallery .slider::before, .gallery .slider::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+}
+.gallery .slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.gallery .slider::before {
+  left: 0;
+  top: 0;
+}
+.gallery .slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: 3500px;
+}
+.gallery .slider .slide {
+  padding: 0 1%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
   }
 }

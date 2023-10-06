@@ -1,0 +1,59 @@
+.news {
+   @include flexbox($jc: center);
+   gap: 2.8125rem;
+   padding: 10%;
+
+   &__content {
+      &-list {
+         @include flexbox($jc: center);
+         gap: 0.75rem;
+
+         .article {
+            width: 30%;
+            text-align: center;
+
+            &__wrapper {
+               &-img {
+                  padding-bottom: 10px;
+               }
+
+               &-text {
+                  @include flexbox($wrap: nowrap, $dir: column, $ai: center);
+                  gap: 5px;
+                  padding-bottom: 10px;
+
+                  span {
+                     color: #F6623E;
+                     font-size: 12px;
+                     font-weight: 500;
+                     line-height: 20px;
+                  }
+
+                  h5 {
+                     padding: 0;
+                  }
+
+                  p {
+                     color: #828181;
+                     font-size: 16px;
+                     font-weight: 400;
+                     line-height: 30px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 948px) {
+   .news{
+      &__content{
+         &-list{
+            .article{
+               width: 80%;
+            }
+         }
+      }
+   }
+}
