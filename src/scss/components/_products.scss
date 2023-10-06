@@ -91,3 +91,14 @@
       }
    }
 }
+@media screen and (max-width: 425px) {
+   .products{
+      &__main{
+         &-list{
+            .product{
+               width: 80%;
+            }
+         }
+      }
+   }
+}

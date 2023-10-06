@@ -429,6 +429,11 @@ h3 {
     width: 50%;
   }
 }
+@media screen and (max-width: 425px) {
+  .deal__products-list .item {
+    width: 80%;
+  }
+}
 .advantages {
   display: flex;
   flex-direction: row;
@@ -619,6 +624,77 @@ h3 {
     width: 50%;
   }
   .products__btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .products__main-list .product {
+    width: 80%;
+  }
+}
+.testimonial {
+  position: relative;
+  background-color: #FEF0E7;
+}
+.testimonial .wave-top {
+  width: 100%;
+  rotate: 180deg;
+  position: absolute;
+  top: -5px;
+}
+.testimonial__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding: 10%;
+}
+.testimonial__content-filling {
+  width: 50%;
+}
+.testimonial__content-filling .review__header {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 4px;
+  padding-bottom: 2.5%;
+}
+.testimonial__content-filling .review__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.testimonial__content-filling .review__description h4 {
+  color: #F6623E;
+  font-size: calc(20px + 0.5208333333vw);
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 4px;
+}
+.testimonial__content-filling .review__description p {
+  color: #454545;
+  font-size: calc(18px + 0.4166666667vw);
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 1px;
+}
+.testimonial__content-filling .review__description span {
+  color: #F6623E;
+  font-weight: 600;
+}
+.testimonial .wave-bottom {
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+}
+
+@media screen and (max-width: 948px) {
+  .testimonial__content-filling {
     width: 100%;
   }
 }

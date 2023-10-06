@@ -1,0 +1,73 @@
+.testimonial {
+   position: relative;
+   background-color: #FEF0E7;
+
+   .wave-top {
+      width: 100%;
+      rotate: 180deg;
+      position: absolute;
+      top: -5px;
+   }
+
+   &__content {
+      @include flexbox($jc: center, $ai: center);
+      gap: 3em;
+      padding: 10%;
+
+      &-filling {
+         width: 50%;
+
+         .review {
+            &__header {
+               font-size: 18px;
+               font-weight: 500;
+               line-height: 25px;
+               letter-spacing: 4px;
+               padding-bottom: 2.5%;
+            }
+
+            &__description {
+               @include flexbox($dir: column);
+               gap: 1.25rem;
+
+               h4 {
+                  color: #F6623E;
+                  font-size: calc(20px + 10 * (100vw / 1920));
+                  font-weight: 500;
+                  line-height: 25px;
+                  letter-spacing: 4px;
+               }
+
+               p {
+                  color: #454545;
+                  font-size: calc(18px + 8 * (100vw/1920));
+                  font-weight: 500;
+                  line-height: 34px;
+                  letter-spacing: 1px;
+               }
+
+               span {
+                  color: #F6623E;
+                  font-weight: 600;
+               }
+            }
+         }
+      }
+   }
+
+   .wave-bottom {
+      position: absolute;
+      bottom: -5px;
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 948px) {
+   .testimonial{
+      &__content{
+         &-filling{
+            width: 100%;
+         }
+      }
+   }
+}
